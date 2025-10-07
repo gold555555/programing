@@ -1,32 +1,43 @@
 #include <stdio.h>
-#include <math.h>
+#include <string.h>
     int main(){
-        int n , po_sum=0,ne_sum=0;
-        double sum = 0;
-         scanf("%d",&n);
-        int x[n+1] , y[n+1];
-         
-            for (int i = 0; i < n; i++)
+        char text[100]; int length ;
+        fgets(text,100,stdin);
+        text[strcspn(text,"\n")]='\0';
+        length = strlen(text);
+        int x =(length-1)*2;
+        for (int i = 0; i < length; i++)
+        {
+            for (int j = 0; j < x ; j++)
             {
-                scanf("%d %d",&x[i],&y[i]);
+               printf(" ");
+               
             }
-        
-        x[n] = x[0];
-        y[n] = y[0];
-            
-            for (int i = 0; i < n; i++)
+            if (i==0)
             {
-                po_sum += x[i]*y[i+1];
-                ne_sum += y[i]*x[i+1];
+                printf("%c",text[i]);
+            }else{
+                for (int j = i; j >= 0; j--)
+                {
+                    if (j != 0)
+                    {
+                        printf("%c ",text[j]);
+                    }else{
+                        printf("%c",text[0]);
+                        for (int j = 1; j <= i; j++)
+                        {
+                            printf(" %c",text[j]);
+                        }
+                        
+                    }
+                    
+                }
+                
             }
-          //  printf("%d -- %d",po_sum,ne_sum);
-
-              sum = fabs((double)(po_sum - ne_sum)) / 2.0;
-
-            printf("%.3f",sum);
+            
+            
+            printf("\n");
+            x=x-2;
+        }
         
-            
-
-            
-
     }
