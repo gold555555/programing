@@ -15,6 +15,11 @@ void get_n_terms(const long long int a[], int N, int pos[]) {
 		}
 		sum = sum*4.000;
 		divide = 1 ;
-		
+		sum = M_PI-sum ;
+		for(i=0 ;i<=10000 ;i++){
+			if(sum<=0){
+				
+			}
+		}
 	}
 }
