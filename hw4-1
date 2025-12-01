@@ -1,0 +1,25 @@
+#include "get_n_terms.h"
+#include <math.h>
+void get_n_terms(const long long int a[], int N, int pos[]) {
+    int i, j;
+    double sum ,divide=1.000000 ,temp = 0;
+    for(i=0 ; i<N ;i++){
+    	for(j = 1 ; j<=a[i]+1 ;j++){
+    		if(j%2 == 0){
+    			sum -= 1/divide;
+    			divide +=2;
+			}else{
+				sum += 1/divide;
+    			divide +=2;
+			}
+		}
+		sum = sum*4.000;
+		divide = 1 ;
+		sum = M_PI-sum ;
+		for(i=0 ;i<=10000 ;i++){
+			if(sum<=0){
+				
+			}
+		}
+	}
+}
