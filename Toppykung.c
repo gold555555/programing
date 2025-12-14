@@ -47,7 +47,7 @@ int main()
     //printf("count : %d\n",count);
     //N=N-count ;
     //printf("N : %d\n",N);
-    printf(".............................\n");
+    //printf(".............................\n");
     for (i = 0; i < N; i++)
     {
         printf("%s\n",text[i]);
